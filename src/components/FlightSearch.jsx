@@ -7,16 +7,16 @@ export default function FlightSearch() {
         <input
           type="text"
           placeholder="From"
-          className="flex-1 p-2 rounded-lg text-black"
+          className="flex-1 p-2 rounded-lg bg-white text-black"
         />
         <input
           type="text"
           placeholder="To"
-          className="flex-1 p-2 rounded-lg text-black"
+          className="flex-1 p-2 rounded-lg bg-white text-black"
         />
         <input
           type="date"
-          className="flex-1 p-2 rounded-lg text-black"
+          className="flex-1 p-2 rounded-lg bg-white text-black"
         />
         <button
           type="submit"
