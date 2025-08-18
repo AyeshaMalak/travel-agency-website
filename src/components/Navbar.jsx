@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-transparent text-black px-6 py-4 flex justify-between items-center">
+    <nav className="relative bg-transparent text-black px-6 py-4 flex justify-between items-center">
       <h1 className="text-2xl font-bold">TravelMate</h1>
 
       {/* Desktop Menu */}
@@ -16,8 +16,8 @@ export default function Navbar() {
       </ul>
 
       {/* Hamburger Button */}
-      <button 
-        className="md:hidden focus:outline-none"
+      <button
+        className="md:hidden focus:outline-none z-20"
         onClick={() => setIsOpen(!isOpen)}
       >
         <svg
@@ -25,7 +25,6 @@ export default function Navbar() {
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
         >
           {isOpen ? (
             <path
@@ -47,7 +46,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-center gap-4 py-4 md:hidden">
+        <ul className="absolute top-full left-0 w-full bg-white text-black flex flex-col items-center gap-4 py-4 md:hidden z-10 shadow-md">
           <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
           <li><Link to="/destinations" onClick={() => setIsOpen(false)}>Destinations</Link></li>
           <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
