@@ -34,7 +34,7 @@ const destinations = [
     description: "Explore ancient ruins and beautiful Mediterranean islands.",
   },
   // 🔥 New Destinations
-   {
+  {
     name: "Pakistan",
     image: "/pakistan.jpg",
     description: "Visit Hunza Valley, Badshahi Mosque and Mazar-e-Quaid",
@@ -108,39 +108,37 @@ export default function Destinations() {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
-  {/* Hero Section */}
-<div className="relative h-[60vh] flex flex-col md:flex-row items-center justify-center bg-gray-900 px-6 md:px-20">
-  {/* Left Side - Text */}
-  <div className="md:w-1/2 flex flex-col justify-center md:justify-start">
-    <h1 className="text-white text-5xl md:text-6xl font-bold text-center md:text-left">
-      Explore the World
-    </h1>
-    <p className="text-gray-300 mt-4 text-center md:text-left text-lg md:text-xl">
-      Discover breathtaking destinations, plan your perfect trip, and create memories that last a lifetime.
-    </p>
-  </div>
+    <div className="bg-gray-50">
+      {/* ===== Hero Section ===== */}
+      <div className="relative min-h-[60vh] flex flex-col md:flex-row items-center justify-center bg-gray-900 px-6 sm:px-10 md:px-20 py-12">
+        {/* Left Side - Text */}
+        <div className="md:w-1/2 flex flex-col justify-center text-center md:text-left">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold">
+            Explore the World
+          </h1>
+          <p className="text-gray-300 mt-4 text-base sm:text-lg md:text-xl">
+            Discover breathtaking destinations, plan your perfect trip, and
+            create memories that last a lifetime.
+          </p>
+        </div>
 
-  {/* Right Side - Image */}
-  <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
-    <img
-      src="/img5.png"
-      alt="Explore"
-      className="w-full max-w-md rounded-xl shadow-lg"
-    />
-  </div>
-</div>
+        {/* Right Side - Image */}
+        <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+          <img
+            src="/img5.png"
+            alt="Explore"
+            className="w-64 sm:w-80 md:w-full max-w-md rounded-xl shadow-lg"
+          />
+        </div>
+      </div>
 
-
-
-      {/* Destinations Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-12">
+      {/* ===== Destinations Grid ===== */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 py-12 sm:py-16">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center mb-8 sm:mb-12">
           Popular Destinations
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {destinations.map((place, idx) => (
             <div
               key={idx}
@@ -149,23 +147,25 @@ export default function Destinations() {
               <img
                 src={place.image}
                 alt={place.name}
-                className="w-full h-56 object-cover"
+                className="w-full h-48 sm:h-56 object-cover"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900">
+              <div className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                   {place.name}
                 </h3>
-                <p className="text-gray-600 mt-2">{place.description}</p>
-                <div className="flex gap-4 mt-4">
+                <p className="text-gray-600 mt-2 text-sm sm:text-base">
+                  {place.description}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 mt-4">
                   <button
                     onClick={() => handleInfo(place)}
-                    className="flex-1 bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900"
+                    className="w-full sm:w-1/2 bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900"
                   >
                     Info
                   </button>
                   <button
                     onClick={() => handleBook(place)}
-                    className="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-black"
+                    className="w-full sm:w-1/2 bg-gray-700 text-white py-2 rounded-lg hover:bg-black"
                   >
                     Book
                   </button>
