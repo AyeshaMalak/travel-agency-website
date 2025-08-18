@@ -59,18 +59,18 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Flight Search box */}
-        <div className="absolute -bottom-10 sm:-bottom-12 z-20 w-[95%] sm:w-[90%] md:w-[70%]">
+        {/* Flight Search box (relative, no overlap) */}
+        <div className="relative z-20 mt-8 w-[95%] sm:w-[90%] md:w-[70%]">
           <FlightSearch />
         </div>
       </div>
 
       {/* ===== About Section ===== */}
-      <section className="max-w-5xl mx-auto py-12 sm:py-16 px-4 sm:px-6">
-        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-4 sm:mb-6">
+      <section className="max-w-5xl mx-auto py-16 px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">
           Our Journey
         </h2>
-        <p className="text-center text-base sm:text-lg text-gray-600 mb-8 sm:mb-12">
+        <p className="text-center text-base sm:text-lg text-gray-600 mb-12">
           We started with a dream to make traveling easier and more memorable.
           Today, we connect people with the world’s most beautiful destinations.
         </p>
